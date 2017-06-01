@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html><head>
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+	<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,minimal-ui" name="viewport" />
+	<title>教室会议室预约管理系统</title>	
+    <!--脚本说明:
+第一步:把如下代码加入<head>区域中-->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var max=0;
+function textlist() {
+max=textlist.arguments.length;
+for (i=0; i<max; i++)
+this[i]=textlist.arguments[i];
+}
+tl = new textlist(
+"教室（会议室）作为一个学校的重要资源,其使用是非常频繁的。当各部门都有重要宣讲会、课堂需要开展时,难免会发生冲突。",
+"为避免冲突,各部门需要花费大量时间和精力进行预约和协调,",
+"但预约困难、协调麻烦等问题往往导致教室（会议室）不能充分发挥其应有的作用,造成效率低下,资源浪费,而且也使得管理员的工作负担加大",
+"韩畅设计和实现了一个功能全面,界面友好,操作简单的预约管理系统。"
+);
+var x = 0; pos = 0;
+var l = tl[0].length;
+function textticker() {
+document.tickform.tickfield.value = tl[x].substring(0, pos) + "_";
+if(pos++ == l) {
+pos = 0;
+setTimeout("textticker()", 2000);
+if(++x == max) x = 0;
+l = tl[x].length;
+} else
+setTimeout("textticker()", 50);
+}
+//  End -->
+</script>
+</HEAD>
+<!--第二步:把如下代码加入<body>区域中-->
+<form name=tickform>
+<textarea name=tickfield rows=3 cols=38 style="background-color: rgb(0,0,0); color: rgb(255,255,255); cursor: default; font-family: Arial; font-size: 12px" wrap=virtual>The news will appear here when the page has finished loading.</textarea>
+</form>
+<!--第三步:把<body>改为-->
+<body bgcolor="#fef4d9" OnLoad="textticker()">
+
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=8;IE=EDGE" />
+<script>
+	sv=1;sv1=0;v6='http://[2001:da8:ad:3213::3]:9002/v6                    ';myv6ip='                                       ';v4serip='202.204.48.66'  ;m46=0;v46ip='10.15.85.8'                             ;
+osele=1;//1=不弹窗
+</script>
+<script>
+domain='[2001:da8:ad:3213::3]';// ///////////////////////
+</style>
+<script src="a23.js" type="text/javascript"></script>
+<link rel="stylesheet" type="text/css" href="http://cipp.ustb.edu.cn/css/style_hook_v2.css"/>
+<style type="text/css">
+body {
+	background-image: url(../Desktop/19266957_131136353000_2.jpg);
+	background-repeat: repeat;
+}
+body,td,th {
+	font-size: medium;
+}
+</style>
+<script src="http://cipp.ustb.edu.cn/js/jquery-1.9.1.min.js" type="text/javascript" charset="UTF-8"></script>
+</head>
+<body onload="init_user()">
+<div class="h">
+	<div class="t">
+		<a href="javascript:void(0);">
+			<img src="../Desktop/hc.jpg" border=0/>
+            
+      <h1> <div class="text" style=" text-align:center;">教室/会议室预约管理系统</div></h1>
+		
+        
+        <body style="background-color:blue">
+<p id="tip_info" style="float: right"></p>
+		<p style="color:#9eadbb;padding-left:15px; margin-top:5px;"><br/><span></span><br/></p>
+  </div>
+</div>
+<div class="cl" style="height: 1px;"></div>
+<div id="mb">	
+</div>
+<div class="cl h20"></div>
+
+<div class="m">	
+	<div class="m_r">
+		<div style="display:none;" id="loading" class="loading"><div style="padding-top: 100px; width:60px;height:60px;margin:0 auto;"><img src="a16.gif" border="0" width="80" height="80" style="width:60px;height:60px;"/></div></div>
+		<div class="d">
+			<P style="clear:both; margin:0 auto; width:173px; padding-top:16px; padding-bottom:18px;">
+				<IMG src="../Desktop/t01333aed82142c4c88.jpg" border=0>
+			</P>
+			<div class="cl h10"></div>
+			<form style="width:100%;" action="/" method="post"  onSubmit="return false;">
+				<P class="d_p">					
+					<span class="dzm">
+					</span>
+					<input name="DDDDD" id="uname" title="请输入帐号" type="text" value="" class="d_in"    oninput="unameInput(true,event)" onpropertychange="unameInput(false,event)" tabIndex=1 maxlength=20/>
+					<label for="uname" class="pl" id="unameTip" onclick="unameFocus()">帐号 Account</label>
+				</P>
+				<div class="cl h10"></div>
+				<P class="d_p">					
+					<span class="dzm dpm">
+					</span>
+					<input name="upass" id="upass" title="请输入密码" type="password" value="" class="d_in"  tabIndex=2 oninput="upassInput(true,event)" onpropertychange="upassInput(false,event)" onclick="if(window.event.keyCode==13) login();" maxlength=20/>					
+					<label for="upass" class="pl" id="upassTip" onclick="upassFocus()">密码 Password</label>
+				</P>
+				<div class="cl h20"></div>
+				<P class="d_p" style="border:0px;">
+					<input type="submit" onClick="login()" tabIndex=3 value="登录" style="background:none; border:0px; background-color:#6BC271; color:#FFF; font-size:14px; text-align:center; border-bottom:solid 2px #173F70;width:100%; height:32px;cursor:pointer;"/>
+				</P>
+				<div class="cl h10"></div>
+				<P class="d_p" style="border:0px; height: 18px; overflow:hidden;">
+					<span style="float:left; color:#fff; font-size:12px;">
+						<input name="savePWD" type="checkbox" value="" tabIndex=4/>
+						保存密码 Save Password
+					</span>
+				  <a href="http://202.204.60.7:8080/nav_login" >
+						注册
+					</a>
+				</P>
+				<input type="hidden" name="v6ip" value="">
+				<input type="hidden" NAME="0MKKey" value="123456789">
+			</form>
+		</div>
+	</div>
+	<div class="m_l"  id="wz">
+	</div>
+	<div class="cl h20"></div>
+	<div class="m_l" style="padding-bottom:20px;" id="dh">	
+		
+	</div>
+	<div class="m_r" style="border:0px; height:258px; overflow:hidden; padding-bottom:20px;" id="gg">
+    
