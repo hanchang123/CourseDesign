@@ -1,0 +1,310 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Welcome to booking system</title>
+<link rel="stylesheet" href="css/dcalendar.picker.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<style>
+	html{
+		height: 100%;
+		padding:0px;
+		margin: 0px;
+		border:0px;
+	}
+	body{
+		height:100%;
+		padding:0px;
+		margin: 0px;
+	}
+	header{
+		padding:20px 0px 0px 20px;
+	}
+	nav{
+		float:right;
+		position:absolute;
+		top:0px;
+		right:10%;
+		height:150px;
+	}
+	nav a{
+		display:inline-block;
+		padding:20px 0px 0px 0px;
+		height:auto;
+		#border:1px solid white;
+		text-align: center;
+		text-decoration: none;
+	}
+	nav ul li a{
+		width:120px;
+		font-size:24px;
+		font-weight:lighter; 
+		font-family: '微软雅黑';
+		color:white;
+	}
+	nav ul li ul li a{
+		font:20px "微软雅黑";
+		font-weight: lighter;
+		width:120px;
+		padding:20px 0px 0px 0px;
+		display:block;
+	}
+	nav ul li{
+		display:inline;
+		float:right;
+		top:0px;
+		padding-left: 0px;
+	}
+	nav ul li ul{
+		display:none;
+		padding: 0px;
+		
+		#width:
+	}
+	nav ul li:hover .firstmenu{
+		#background-color:rgba(255,255,255,0.5);
+		border-bottom: 1px solid white;
+		
+	}
+	nav ul li:hover ul{
+		display:block;
+		width:120px;
+	}
+	#wrapper{
+		margin: 0px;
+		padding: 0px;
+		background: url(../img/background5.png);
+		background-origin:padding-box;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100%;
+		font-family:"微软雅黑"," 等线","Arial";
+	}
+	#content{
+		padding:50px 0px 0px 70px;
+		height:60%;
+		#padding-left: 0px;
+		#overflow: auto;
+		#overflow-x:auto;
+		#overflow-y: hidden;
+	}
+	#leftcolumn{
+		#margin-top: 70px;
+		#font-family: Arial;
+		#padding-left: 40px;
+		width: 40%;
+		#display: inline-block;
+		float:left;
+		padding:0px;
+	}
+	#calendar{
+		font-family: "Consolas";
+		opacity: 0.8;
+		padding:10px 20px;
+		width: 210px;
+	}
+	#checkBookinInfo #selectinfo{
+		width:300px;
+	}
+	#checkBookinInfo #selectinfo table{
+		width:250px;
+		padding:0px;
+		border-spacing: 0px 5px;
+	}
+	#checkBookinInfo #selectinfo table td{
+		height: 40px;
+		background-color: aliceblue;
+		text-align: center;
+		font-family: "微软雅黑";
+	}
+	#checkBookinInfo #selectinfo table td:first-child{
+		opacity: 0.95;
+	}
+	.wide{
+		border:none;
+	}
+	#rightcolumn {
+		#float:left;
+		#font-size:50px;
+		top:0px;
+		#position: relative;
+		#right:10%;
+		display: inline-block;
+		padding:0px;
+		width:50%;
+		height: 450px;
+
+	}
+	#bookinInfo ul{
+		list-style-type: none;
+		padding:0px;
+	}
+	#bookinInfo li{
+		padding:5px 0px;
+	}
+	#bookinInfo table{
+		width:400px;
+		border-spacing: 0px;
+		padding:0px;
+	}
+	#bookinInfo table tr{
+		background-color:white;
+		text-align: center;
+		font-family: "微软雅黑";
+		font-size: 16px;
+	}
+	#bookinInfo table td{
+		padding:5px 0px;
+	}
+	#bookinInfo table tr:nth-last-child(odd){
+		background-color:rgba(255,255,255,0.8);
+	}
+	footer{
+		display:block;
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<a href="#" id="logo"><img src="../img/logo4.png"></a>
+	<nav>
+	<ul>
+	<li>
+		<a href="UserController_login.html" class="firstmenu">登录</a>
+		<ul>
+			<li><a href="#" class="secondmenu">注册</a></li>
+			<li><a href="#" class="secondmenu">管理员登录</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="UserController_index.html" class="firstmenu">预定</a>
+		<ul>
+			<li><a href="#" class="secondmenu">长期预定</a></li>
+			<li><a href="#" class="secondmenu">查看预定</a></li>
+		</ul>
+	</li>
+	</ul>
+</nav>
+</header>
+<div id="content">
+	<div id="leftcolumn">
+		<div id="checkBookinInfo">
+			<div></div>
+			<div id="calendar" class="calendar"></div>
+			<div id="selectinfo">
+			<table >
+			<tr>
+				<td><lable for="period">时间段</lable></td>
+				<td>
+				<select id="period" class="wide">
+					<option>1111</option>
+					<option>2222</option>
+					<option>3333</option>
+					<option>2222</option>
+					<option>3333</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lable for="type">类型</lable>
+				</td>
+				<td>
+				<select id="type" class="wide">
+					<option>2222</option>
+					<option>3333</option>
+				</select>	
+				</td>				
+			</tr>
+			<tr>
+				<td>
+					<lable for="state">状态</lable>
+				</td>
+				<td>
+				<select id="state" class="wide">
+					<option>2222</option>
+					<option>3333</option>
+				</select>	
+				</td>				
+			</tr>
+		</table>
+			</div>				
+		</div>
+		
+	</div>
+	<div id="rightcolumn">
+		<div id="bookinInfo">
+		<ul>
+			<li>
+			<table>
+				<tr>
+					<td>时间</td>
+					<td>2017/5/12 8:00-10:00</td>
+				</tr>
+				<tr>
+					<td>类型</td>
+					<td>教室</td>
+				</tr>
+				<tr>
+					<td>会议室教室名</td>
+					<td>304</td>
+				</tr>
+				<tr>
+					<td>状态</td>
+					<td>预定成功</td>
+				</tr>
+				<tr>
+					<td><input type="button" id="checkdetail" value="查看"></td>
+					<td><input type="button" id="cancel" value="取消"></td>
+				</tr>
+			</table>	
+			</li>
+			<li>	
+			<table>
+				<tr>
+					<td>时间</td>
+					<td>2017/5/12 8:00-10:00</td>
+				</tr>
+				<tr>
+					<td>类型</td>
+					<td>教室</td>
+				</tr>
+				<tr>
+					<td>会议室教室名</td>
+					<td>304</td>
+				</tr>
+				<tr>
+					<td>状态</td>
+					<td>已使用</td>
+				</tr>
+				<tr>
+					<td><input type="button" id="checkdetail" value="查看"></td>
+					<td><input type="button" id="delete" value="删除"></td>
+				</tr>
+			</table>
+			</li>
+		</ul>
+
+		</div>
+	</div>
+</div>
+<footer>	
+	<p>This is footerThis is footerThis is footerThis is footerThis is footer</p>
+</footer>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/dcalendar.picker.js"></script>
+<script src="js/jquery.nice-select.js"></script>
+<script type="text/javascript">
+	$('#calendar').dcalendar();	
+	$('.wide').niceSelect();
+	$('.right').niceSelect();
+//window.alert("aaa");
+</script>
+</body>
+
+</html>

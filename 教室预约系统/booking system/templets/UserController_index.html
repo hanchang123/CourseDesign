@@ -1,0 +1,244 @@
+ <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+   <!--脚本说明:
+第一步:把如下代码加入<head>区域中-->
+<SCRIPT LANGUAGE="JavaScript">
+
+<!-- Begin
+var max=0;
+function textlist() {
+max=textlist.arguments.length;
+for (i=0; i<max; i++)
+this[i]=textlist.arguments[i];
+}
+tl = new textlist(
+"教室（会议室）作为一个学校的重要资源,其使用是非常频繁的。当各部门都有重要宣讲会、课堂需要开展时,难免会发生冲突。",
+"为避免冲突,各部门需要花费大量时间和精力进行预约和协调,",
+"但预约困难、协调麻烦等问题往往导致教室（会议室）不能充分发挥其应有的作用,造成效率低下,资源浪费,而且也使得管理员的工作负担加大",
+"韩畅设计和实现了一个功能全面,界面友好,操作简单的预约管理系统。"
+);
+var x = 0; pos = 0;
+var l = tl[0].length;
+function textticker() {
+document.tickform.tickfield.value = tl[x].substring(0, pos) + "_";
+if(pos++ == l) {
+pos = 0;
+setTimeout("textticker()", 2000);
+if(++x == max) x = 0;
+l = tl[x].length;
+} else
+setTimeout("textticker()", 50);
+}
+//  End -->
+</script>
+</HEAD>
+<!--第二步:把如下代码加入<body>区域中-->
+<form name=tickform>
+<textarea name=tickfield rows=3 cols=38 style="background-color: rgb(0,0,0); color: rgb(255,255,255); cursor: default; font-family: Arial; font-size: 12px" wrap=virtual>The news will appear here when the page has finished loading.</textarea>
+</form>
+<!--第三步:把<body>改为-->
+<body bgcolor="#fef4d9" OnLoad="textticker()">
+
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=11;IE=10;IE=9;IE=8;IE=EDGE" />
+    
+
+<title>Welcome to booking system</title>
+<link rel="stylesheet" href="css/dcalendar.picker.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<link rel="stylesheet" href="css/common.css">
+<style>
+	#wrapper{
+		background:url(img/背景8.jpg);
+	}
+	#calendar{
+		font-family: "Consolas";
+		opacity: 0.8;
+		padding:10px 20px;
+		width: 210px;
+	}
+	#selectinfo{
+		width:250px;
+		margin: 2% 0px 0px 5%;
+		#border: 1px solid green;
+	}
+	#selectinfo table{
+		width:250px;
+		padding:0px;
+		border-spacing: 0px 10px;
+	}
+	#selectinfo table td{
+		height: 40px;
+		background-color: aliceblue;
+		text-align: center;
+		font-family: "微软雅黑";
+		#font-size: 14px;
+	}
+	#selectinfo table td:first-child{
+		opacity: 0.95;
+	}
+	#selectinfo table td:nth-child(2){
+	}
+	.wide{
+		border:none;
+	}
+	#roomlist {
+		margin:3% 0px;
+		#border: 1px solid black;
+	}
+	#roomlist table{
+		border-spacing: 0px;
+		background-color:rgba(255,255,255,0.8);
+	}
+	#roomlist table td{
+		width:120px;
+		height:70px;
+		border:1px solid white;
+		font-size:30px;
+		font-family:"微软雅黑",Aral;
+		font-weight: lighter;
+		text-align: center;
+	}
+	#roomlist p{
+		background-color: aliceblue;
+		font-size:36px;
+		font-family:"微软雅黑",Aral;
+		font-weight: lighter;
+		text-align: center;
+		padding:10px 5px;
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+
+<header>
+	<div id="logo">
+		<a href="#" ><img src="img/logo4.jpg"></a>	
+        
+	</div>
+	<nav>
+	<ul class="menu">
+		<li>
+			<a>预定</a>
+			<ul class="submenu"
+				<li><a href="index.php?controller=UserController&action=query">普通预定</a></li>
+				<li><a href="index.php?controller=UserController&action=longquery">长期预定</a></li>
+				<li><a href="index.php?controller=UserController&action=checkBookin">查看预定</a></li>
+				<li><a href="index.php?controller=UserController&action=cancelBookin">取消预定</a></li>
+                <li><a href="用户导航.html">预定导航</a></li>
+                 
+			</ul>
+		</li>
+		<li>
+			<a>登录</a>
+			<ul class="submenu">
+				<li><a href="index.php?controller=UserController&action=login">用户登录</a></li>
+				<li><a href="index.php?controller=AdminController&action=login">管理员登录</a></li>
+			</ul>
+		</li>
+		<li>
+			<a href="注册界面5.23.html">注册</a>
+            <li><a href="教室会议室具体容纳量.html">教室容量</a></li>
+		</li>
+	</ul>
+	</nav>
+</header>
+<div id="content">
+	<div id="leftcolumn">
+		<div id="selectinfo">	
+		<table>
+			<tr>
+				<td><lable for="period">时间段</lable></td>
+				<td>
+				<select id="period" name="period" class="wide">
+					<option value="7:30-9:30">7:30-9:30&nbsp;&nbsp;&nbsp;&nbsp;</option>
+					<option value="9:50-11:50">9:50-11:50&nbsp;&nbsp;</option>
+					<option value="13:00-15:00">13:00-15:00</option>
+					<option value="15:20-17:20">15:20-17:20</option>
+					<option value="17:40-19:40">17:40-19:40</option>
+					<option value="20:00-22:00">20:00-22:00</option>
+				</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<lable for="type">类型</lable>
+				</td>
+				<td>
+				<select id="type" name="type" class="wide">
+					<option value="小教室">教学楼</option>
+					<option value="中教室">机电楼</option>
+					<option value="大教室">逸夫楼</option>
+					<option value="小会议室">实验楼</option>
+					<option value="大会议室">镭目报告厅</option>
+				</select>	
+				</td>				
+			</tr>
+		</table>
+		<input type="text" id="date" hidden="hidden" onchange="window.alert('aa');">
+		</div>	
+	</div>
+	<div id="rightcolumn">
+		<div id="roomlist">	
+        
+		</div>
+	</div>
+</div>
+</div>
+<script src="js/jquery.js"></script>
+<script src="js/dcalendar.picker.js"></script>
+<script src="js/jquery.nice-select.js"></script>
+<!--<script src="js/common.js"></script>-->
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#date").dcalendarpicker();
+		$('.wide').niceSelect();
+		//selector init
+		$('#type').bind('change',function () {
+			var type = $(this).find('option:selected').attr('value');
+			switch (type) {
+				case '小教室':
+				case '中教室':
+				case '大教室':{
+					$('#period').html('<option value="7:30-9:30">7:30-9:30&nbsp;&nbsp;&nbsp;&nbsp;</option>'+
+						'<option value="9:50-11:50">9:50-11:50&nbsp;&nbsp;</option>'+
+						'<option value="13:00-15:00">13:00-15:00</option>'+
+						'<option value="15:20-17:20">15:20-17:20</option>'+
+						'<option value="17:40-19:40">17:40-19:40</option>'+
+						'<option value="20:00-22:00">20:00-22:00</option>')
+					$('.wide').niceSelect('update');
+				};break;
+				case '小会议室':
+				case '大会议室':{
+					$('#period').html('<option value="8:00-11:00">8:00-11:00&nbsp;&nbsp;</option>'+
+						'<option value="14:00-17:00">14:00-17:00</option>'+
+						'<option value="18:00-21:00">18:00-21:00</option>');
+					$('.wide').niceSelect('update');
+				};break;
+			}
+//			asynQuery();
+		});
+		//event init
+		function asynQuery() {
+			if ($('#date').val() == "") {
+				var date = new Date();
+				$('#date').val(date.getDate() + '/' + (date.getMonth() + 1 ) + '/' + date.getFullYear());
+			}
+			$("#roomlist").load("index.php?controller=BookinController&action=query&date=" + 
+								$('#date').val() + "&period=" + $('#period').val() + "&type=" + 
+								$('#type').val() );
+			window.alert('changed' + $('#type').val() + $('#date').val() + $('#period').val());
+		}
+		$('#date').bind('change',function () {asynQuery();});
+		$('#period').bind('change',function () {asynQuery();});
+		});
+		
+	
+</script>
+</body>
+
+</html>

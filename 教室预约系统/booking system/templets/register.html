@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Welcome to booking system</title>
+<link rel="stylesheet" href="css/dcalendar.picker.css">
+<link rel="stylesheet" href="css/nice-select.css">
+<style>
+	html{
+		height: 100%;
+		padding:0px;
+		margin: 0px;
+		border:0px;
+	}
+	body{
+		height:100%;
+		padding:0px;
+		margin: 0px;
+	}
+	header{
+		padding:20px 0px 0px 20px;
+	}
+	nav{
+		float:right;
+		position:absolute;
+		top:0px;
+		right:10%;
+		height:150px;
+	}
+	nav a{
+		display:inline-block;
+		padding:20px 0px 0px 0px;
+		height:auto;
+		#border:1px solid white;
+		text-align: center;
+		text-decoration: none;
+	}
+	nav ul li a{
+		width:120px;
+		font-size:24px;
+		font-weight:lighter; 
+		font-family: '微软雅黑';
+		color:white;
+	}
+	nav ul li ul li a{
+		font:20px "微软雅黑";
+		font-weight: lighter;
+		width:120px;
+		padding:20px 0px 0px 0px;
+		display:block;
+	}
+	nav ul li{
+		display:inline;
+		float:right;
+		top:0px;
+		padding-left: 0px;
+	}
+	nav ul li ul{
+		display:none;
+		padding: 0px;
+		
+		#width:
+	}
+	nav ul li:hover .firstmenu{
+		#background-color:rgba(255,255,255,0.5);
+		border-bottom: 1px solid white;
+		
+	}
+	nav ul li:hover ul{
+		display:block;
+		width:120px;
+	}
+	#wrapper{
+		margin: 0px;
+		padding: 0px;
+		background: url(../img/background5.png);
+		background-origin:padding-box;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100%;
+		font-family:"微软雅黑"," 等线","Arial";
+	}
+	#content{
+		padding:50px 0px 0px 70px;
+		#padding-left: 0px;
+		#overflow: auto;
+		#overflow-x:auto;
+		#overflow-y: hidden;
+
+	}
+	#register{
+		padding:0px 30%;
+	}
+	#register table{
+		width:500px;
+		padding:10px 20px;
+		font-family: "微软雅黑","Consolas";
+		font-weight: lighter;
+		border-spacing: 0px;
+		#align-content: center;
+	}
+	#register table tr{
+		height: 60px;
+		text-align: center;
+		background-color: white;
+		padding:10px 5px;
+	}
+	#register table tr:nth-last-of-type(odd){
+		background-color: rgba(255,255,255,0.9);
+	}
+	footer{
+		display:block;
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<a href="#" id="logo"><img src="../img/logo4.png"></a>
+	<nav>
+	<ul>
+	<li>
+		<a href="UserController_login.html" class="firstmenu">登录</a>
+		<ul>
+			<li><a href="#" class="secondmenu">注册</a></li>
+			<li><a href="#" class="secondmenu">管理员登录</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="firstmenu">预定</a>
+		<ul>
+			<li><a href="longbook.html" class="secondmenu">长期预定</a></li>
+			<li><a href="#" class="secondmenu">查看预定</a></li>
+		</ul>
+	</li>
+	</ul>
+</nav>
+</header>
+<div id="content">
+	<div id="register">		
+		<table>
+			<tr>
+				<td><lable for="username">用户名</lable></td>
+				<td><input type="text" id="username" value="ming"></td>
+			</tr>
+			<tr>
+				<td><lable for="password">密码</lable></td>
+				<td><input type="password" id="password" value="ming"></td>
+			</tr>
+			<tr>
+				<td><lable for="confirmpassword">确认密码</lable></td>
+				<td><input type="password" id="confirmpassword" value="ming"></td>
+			</tr>
+			<tr>
+				<td><lable for="mail">邮箱</lable></td>
+				<td><input type="email" id="mail" value="ming@ustb.edu.cn"></td>
+			</tr>
+			<tr>
+				<td><lable for="phone">手机</lable></td>
+				<td><input type="tel" id="phone" value="10086"></td>
+			</tr>
+			<tr>
+				<td><lable for="status">身份</lable></td>
+				<td><select id="status">
+					<option>学生</option>
+					<option>老师</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td><lable for="statusId">学号</lable></td>
+				<td><input type="text" id="statusId" value="41455054"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" value="注册">
+				</td>
+			</tr>
+		</table>
+		</div>
+</div>
+<footer>	
+	<p>This is footerThis is footerThis is footerThis is footerThis is footer</p>
+</footer>
+</div>
+<script src="js/jquery.js"></script>
+</script>
+</body>
+
+</html>

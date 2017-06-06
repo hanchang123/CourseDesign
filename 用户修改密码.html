@@ -55,10 +55,18 @@ suckerfish(hover, "li");
 </head>
 <body>
 <ol id="need">
-<li><label class="old_password">原始密码：</label> <input name='' type='password' id='' /></li>
+<li><label class="old_password">用户名：</label> <input name='' type='password' id='' /></li>
 <li><label class="new_password">新的密码：</label> <input name='' type='password' id='' /><dfn>（密码长度为6~20字节。不想修改请留空）</dfn></li>
+
+			
 <li><label class="rePassword">重复密码：</label> <input name='' type='password' id='' /></li>
+<li><label class="statusId">学号：</label> <input name='' type='text' id='statusId' /></li>
+
 <li><label class="email">邮箱设置：</label> <input name='' type='text' id='' /><dfn>（也可以填写手机号）</dfn></li>
+</r>
+<P class="d_p" style="border:0px;">
+					<input type="submit" onClick="login()" tabIndex=3 value="修改" style="background:none; border:0px; background-color:blue; color:black; font-size:14px; text-align:center; border-bottom:solid 2px #173F70;width:%50; height:32px;cursor:pointer;"/>
+				</P>
 </ol>
 </body>
 </html>

@@ -1,0 +1,288 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<title>Welcome to booking system</title>
+<style>
+	html{
+		height: 100%;
+		padding:0px;
+		margin: 0px;
+		border:0px;
+	}
+	body{
+		height:100%;
+		padding:0px;
+		margin: 0px;
+	}
+	header{
+		padding:20px 0px 0px 20px;
+	}
+	nav{
+		float:right;
+		position:absolute;
+		top:0px;
+		right:10%;
+		height:150px;
+	}
+	nav a{
+		display:inline-block;
+		padding:20px 0px 0px 0px;
+		height:auto;
+		#border:1px solid white;
+		text-align: center;
+		text-decoration: none;
+	}
+	nav ul li a{
+		width:120px;
+		font-size:24px;
+		font-weight:lighter; 
+		font-family: '微软雅黑';
+		color:white;
+	}
+	nav ul li ul li a{
+		font:20px "微软雅黑";
+		font-weight: lighter;
+		width:120px;
+		padding:20px 0px 0px 0px;
+		display:block;
+	}
+	nav ul li{
+		display:inline;
+		float:right;
+		top:0px;
+		padding-left: 0px;
+	}
+	nav ul li ul{
+		display:none;
+		padding: 0px;
+		
+		#width:
+	}
+	nav ul li:hover .firstmenu{
+		#background-color:rgba(255,255,255,0.5);
+		border-bottom: 1px solid white;
+		
+	}
+	nav ul li:hover ul{
+		display:block;
+		width:120px;
+	}
+	#wrapper{
+		margin: 0px;
+		padding: 0px;
+		background: url(../img/background5.png);
+		background-origin:padding-box;
+		background-size: 100% 100%;
+		width: 100%;
+		height: 100%;
+		font-family:"微软雅黑"," 等线","Arial";
+	}
+	#content{
+		padding:50px 0px 0px 70px;
+		#padding-left: 0px;
+		#overflow: auto;
+		#overflow-x:auto;
+		#overflow-y: hidden;
+	}
+	#leftcolumn{
+		#margin-top: 70px;
+		font-family: Arial;
+		#padding-left: 40px;
+		min-width: 40%;
+		#display: inline-block;
+		float:left;
+		padding:0px;
+		height:450px;
+	}
+	#rightcolumn {
+		#float:left;
+		top:0px;
+		#position: relative;
+		#right:10%;
+		display: inline-block;
+		padding:0px;
+		max-width:50%;
+		height: 450px;
+
+	}
+	#messagelist table{
+		border-spacing: 0px;
+		width: 350px;
+		padding:5px 10px;
+	}
+	#messagelist table td{
+		background-color: rgba(255,255,255,0.9);
+		padding:5px;
+		text-align: center;
+		font-family: "微软雅黑";
+		font-size:16px;
+		font-weight: lighter;
+	}
+	#messagelist table tr:nth-last-child(odd){
+		background-color: rgba(255,255,255,0.9);
+	}
+	#messageInfo table{
+		border-spacing: 0px;
+		width: 500px;
+		padding:10px 10px;
+	}
+	#messageInfo table td{
+		background-color: rgba(255,255,255,0.9);
+		padding:10px 5px 5px;
+		text-align: center;
+		font-family: "微软雅黑";
+		font-size:16px;
+		font-weight: lighter;
+		height:25px;
+	}
+	#messageInfo table td:last-child{
+		font-size:12px;
+	}
+	#messageInfo tr:nth-child(6) td{
+		#padding-left:20px;
+		font-size:20px;
+		font-weight: normal;
+		text-align: center;	
+		background-color:white;
+		padding:20px 10px;
+	}
+	#messageInfo tr:nth-last-child(odd){
+		background-color: rgba(255,255,255,0.7);
+	}
+</style>
+</head>
+
+<body>
+<div id="wrapper">
+<header>
+	<a href="#" id="logo"><img src="../img/logo4.png"></a>
+	<nav>
+	<ul>
+	<li>
+		<a href="UserController_login.html" class="firstmenu">登录</a>
+		<ul>
+			<li><a href="#" class="secondmenu">注册</a></li>
+			<li><a href="#" class="secondmenu">管理员登录</a></li>
+		</ul>
+	</li>
+	<li>
+		<a href="#" class="firstmenu">预定</a>
+		<ul>
+			<li><a href="longbook.html" class="secondmenu">长期预定</a></li>
+			<li><a href="#" class="secondmenu">查看预定</a></li>
+		</ul>
+	</li>
+	</ul>
+</nav>
+</header>
+<div id="content">
+	<div id="leftcolumn">
+		<div id="messagelist">
+		<table>
+			<tr>
+				<td>From</td>
+				<td>System</td>
+			</tr>
+			<tr>
+				<td>Theme</td>
+				<td>预定</td>
+			</tr>			
+			<tr>
+				<td>Outhline</td>
+				<td>成功预定304</td>			
+			</tr>
+			<tr>
+				<td>Time</td>	
+				<td>2017/5/12 17:00</td>		
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>From</td>
+				<td>System</td>
+			</tr>
+			<tr>
+				<td>Theme</td>
+				<td>预定</td>
+			</tr>			
+			<tr>
+				<td>Outhline</td>
+				<td>成功预定304</td>			
+			</tr>
+			<tr>
+				<td>Time</td>	
+				<td>2017/5/12 17:00</td>		
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td>From</td>
+				<td>System</td>
+			</tr>
+			<tr>
+				<td>Theme</td>
+				<td>预定</td>
+			</tr>			
+			<tr>
+				<td>Outhline</td>
+				<td>成功预定304</td>			
+			</tr>
+			<tr>
+				<td>Time</td>	
+				<td>2017/5/12 17:00</td>		
+			</tr>
+		</table>
+		</div>	
+	</div>
+	<div id="rightcolumn">
+		<div id="messageInfo">
+			<table>
+				<tr>
+					<td>From</td>
+					<td>System</td>
+				</tr>
+				<tr>
+					<td>Theme</td>
+					<td>预定</td>
+				</tr>			
+				<tr>
+					<td>Outhline</td>
+					<td>成功预定304</td>			
+				</tr>
+				<tr>
+					<td>Time</td>	
+					<td>2017/5/12 17:00</td>		
+				</tr>
+				<tr>
+					<td>Content</td>
+					<td></td>			
+				</tr>
+				<tr>
+					<td colspan="2">
+					ming!你好，你于2017/5/12 17:00成功预定304
+					</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td>
+						<input type="button" id="delete" value="删除">
+					</td>
+				</tr>
+			</table>		
+		</div>	
+	</div>
+</div>
+<footer>	
+	<p>This is footerThis is footerThis is footerThis is footerThis is footer</p>
+</footer>
+</div>
+<script src="js/jquery.js"></script>
+<script type="text/javascript">
+//window.alert("aaa");
+</script>
+</body>
+
+</html>
+

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<title>无标题文档</title>
+
+
+<link rel="stylesheet" href="templets/css/nice-select.css"/>
+</head>
+
+<body>
+<div>
+	<div id="div1">
+		<div><font color="white">设为首页</font></div>
+		<input id="a">
+	</div>
+		<table id="aa" class="calendar"></table>
+		<selcet class="small">
+			<option selected="selected">2222</option>
+			<option>2222</option>
+			<option>2222</option>
+		</selcet>
+		<selcet class="wide">
+			<option>22224</option>
+			<option>2222</option>
+			<option>2222</option>
+		</selcet>
+
+</div>
+<script src="templets/js/jquery-1.11.0.min.js"></script>
+<script src="templets/js/jquery.nice-select.js"></script>
+<script src="templets/js/fastclick.js"></script>
+<script async>
+$('.wide').niceSelect();
+	$('.small').niceSelect();
+	//window.alert($('#aa').getDays());
+</script>
+</body>
+</html>
